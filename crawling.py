@@ -6,6 +6,8 @@ import requests
 import pandas as pd
 import urllib3
 import numpy as np
+from log import logger
+
 urllib3.disable_warnings()
 
 init_url = 'https://www.kovo.co.kr/stats/42001_team-totalrecord.asp'
@@ -16,7 +18,8 @@ if(html.status_code == 200):
     soup = BeautifulSoup(html.content, 'html.parser')
     html.close()
 else:
-    print("Request ERROR ::: status code ::: " + str(html.status_code)) # 항상 에러 발생을 염두에 두자..
+    # logger.info('STATUS CODE is ' + + str(html.status_code))
+    logger.error()
 
 # %%
 # 파라미터 데이터 추출
@@ -96,7 +99,9 @@ def param_call(paramdict):
             temp_data.append(temp_array) # loc를 지양하기 위해 부득이하게 수정            
 
     else:
-        print("param_call Request ERROR ::: " + str(params) + " ===> status code ::: " + str(html_spec.status_code))
+        # logger.info('params is ' + str(params))
+        # logger.info('STATUS CODE is ' + + str(html_spec.status_code))
+        logger.error('', stack_info=True)        
         return
 
     return {'data': temp_data, 'cols' : cols}
