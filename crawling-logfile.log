@@ -49,3 +49,157 @@
 2022-08-07 19:30:15,555 [INFO] [crawling.py:69]:: ===== def param_validate end ======
 2022-08-07 19:30:15,639 [INFO] [crawling.py:106]:: ===== def param_call end ======
 2022-08-07 19:30:15,640 [INFO] [crawling.py:129]:: ================ crawling end ================
+2022-08-07 19:33:26,861 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 19:33:26,957 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:33:26,958 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:33:26,959 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:33:26,959 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:33:26,960 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:33:26,960 [INFO] [crawling.py:82]:: ===== def param_call start ======
+2022-08-07 19:33:26,961 [INFO] [crawling.py:51]:: ===== def param_validate start ======
+2022-08-07 19:33:26,961 [INFO] [crawling.py:59]:: ===== def param_validate INFO : ====== 사용자 FROM TO 시즌 변수 설정 오류
+2022-08-07 19:33:27,045 [INFO] [crawling.py:106]:: ===== def param_call end ======
+2022-08-07 19:33:27,046 [INFO] [crawling.py:128]:: ================ crawling end ================
+2022-08-07 19:33:50,626 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 19:33:50,710 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:33:50,711 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:33:50,712 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:33:50,712 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:33:50,713 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:33:50,714 [INFO] [crawling.py:82]:: ===== def param_call start ======
+2022-08-07 19:33:50,714 [INFO] [crawling.py:51]:: ===== def param_validate start ======
+2022-08-07 19:33:50,714 [INFO] [crawling.py:59]:: ===== def param_validate INFO : ====== 사용자 FROM TO 시즌 변수 설정 오류
+2022-08-07 19:33:50,806 [INFO] [crawling.py:106]:: ===== def param_call end ======
+2022-08-07 19:33:50,807 [INFO] [crawling.py:129]:: ================ crawling end ================
+2022-08-07 19:34:01,252 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 19:34:01,348 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:34:01,349 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:34:01,350 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:34:01,351 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:34:01,352 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 19:34:01,352 [INFO] [crawling.py:82]:: ===== def param_call start ======
+2022-08-07 19:34:01,353 [INFO] [crawling.py:51]:: ===== def param_validate start ======
+2022-08-07 19:34:01,353 [INFO] [crawling.py:59]:: ===== def param_validate INFO : ====== 사용자 FROM TO 시즌 변수 설정 오류
+2022-08-07 19:34:01,445 [INFO] [crawling.py:106]:: ===== def param_call end ======
+2022-08-07 19:34:01,446 [INFO] [crawling.py:129]:: ================ crawling end ================
+2022-08-07 21:21:28,228 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 21:21:28,326 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:21:28,327 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:21:28,328 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:21:28,329 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:21:28,330 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:21:28,331 [INFO] [crawling.py:82]:: ===== def param_call start ======
+2022-08-07 21:21:28,331 [INFO] [crawling.py:51]:: ===== def param_validate start ======
+2022-08-07 21:21:28,331 [INFO] [crawling.py:59]:: ===== def param_validate INFO : ====== 사용자 FROM TO 시즌 변수 설정 오류
+2022-08-07 21:21:28,332 [ERROR] [crawling.py:119]:: ===== def param_call ERROR : ====== 변수 request 중 오류 발생
+2022-08-07 21:22:59,485 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 21:22:59,575 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:22:59,576 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:22:59,577 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:22:59,578 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:22:59,579 [INFO] [crawling.py:38]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:22:59,580 [INFO] [crawling.py:82]:: ===== def param_call start ======
+2022-08-07 21:22:59,580 [INFO] [crawling.py:51]:: ===== def param_validate start ======
+2022-08-07 21:22:59,580 [INFO] [crawling.py:59]:: ===== def param_validate INFO : ====== 사용자 FROM TO 시즌 변수 설정 오류
+2022-08-07 21:22:59,581 [ERROR] [crawling.py:120]:: ===== def param_call ERROR : ====== 변수 request 중 오류 발생
+2022-08-07 21:25:55,465 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 21:25:55,550 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:25:55,553 [INFO] [crawling.py:84]:: ===== def param_call start ======
+2022-08-07 21:25:55,553 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 21:25:55,554 [INFO] [crawling.py:61]:: ===== def param_validate INFO : ====== 사용자 FROM TO 시즌 변수 설정 오류
+2022-08-07 21:25:55,555 [INFO] [crawling.py:137]:: ================ crawling end ================
+2022-08-07 21:27:47,237 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 21:27:47,341 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:27:47,344 [INFO] [crawling.py:84]:: ===== def param_call start ======
+2022-08-07 21:27:47,345 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 21:27:47,345 [INFO] [crawling.py:71]:: ===== def param_validate end ======
+2022-08-07 21:27:47,438 [INFO] [crawling.py:114]:: ===== def param_call end ======
+2022-08-07 21:29:11,612 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 21:29:11,709 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:29:11,711 [INFO] [crawling.py:84]:: ===== def param_call start ======
+2022-08-07 21:29:11,712 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 21:29:11,712 [INFO] [crawling.py:71]:: ===== def param_validate end ======
+2022-08-07 21:29:11,713 [ERROR] [crawling.py:124]:: ===== def param_call ERROR : ====== 변수 request 중 오류 발생
+2022-08-07 21:29:32,871 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 21:29:32,954 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:29:32,957 [INFO] [crawling.py:84]:: ===== def param_call start ======
+2022-08-07 21:29:32,958 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 21:29:32,958 [INFO] [crawling.py:71]:: ===== def param_validate end ======
+2022-08-07 21:29:33,048 [INFO] [crawling.py:115]:: ===== def param_call end ======
+2022-08-07 21:29:41,103 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 21:29:41,180 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:29:41,182 [INFO] [crawling.py:84]:: ===== def param_call start ======
+2022-08-07 21:29:41,183 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 21:29:41,183 [INFO] [crawling.py:71]:: ===== def param_validate end ======
+2022-08-07 21:29:41,184 [ERROR] [crawling.py:124]:: ===== def param_call ERROR : ====== 변수 request 중 오류 발생
+2022-08-07 21:30:07,930 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 21:30:08,021 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 21:30:08,024 [INFO] [crawling.py:84]:: ===== def param_call start ======
+2022-08-07 21:30:08,025 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 21:30:08,025 [INFO] [crawling.py:71]:: ===== def param_validate end ======
+2022-08-07 21:30:08,025 [INFO] [crawling.py:92]:: ===== def param_validate INFO : ====== params = {'s_seaon': '018', 's_pr': '201|1', 'e_season': '018', 'e_pr': '203|1', 'part': 'point'}
+2022-08-07 21:30:08,120 [INFO] [crawling.py:115]:: ===== def param_call end ======
+2022-08-07 22:22:32,697 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 22:22:32,784 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 22:22:32,786 [INFO] [crawling.py:131]:: ===== def param_call start ======
+2022-08-07 22:22:32,786 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 22:22:32,787 [ERROR] [crawling.py:119]:: ===== def param_validate ERROR : ====== 변수 예외처리 중 오류 발생
+2022-08-07 22:22:32,787 [ERROR] [crawling.py:171]:: ===== def param_call ERROR : ====== 변수 request 중 오류 발생
+2022-08-07 22:23:29,307 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 22:23:29,404 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 22:23:29,406 [INFO] [crawling.py:131]:: ===== def param_call start ======
+2022-08-07 22:23:29,407 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 22:23:29,407 [ERROR] [crawling.py:119]:: ===== def param_validate ERROR : ====== 변수 예외처리 중 오류 발생
+2022-08-07 22:23:29,408 [ERROR] [crawling.py:171]:: ===== def param_call ERROR : ====== 변수 request 중 오류 발생
+2022-08-07 22:23:51,948 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 22:23:52,041 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 22:23:52,043 [INFO] [crawling.py:131]:: ===== def param_call start ======
+2022-08-07 22:23:52,044 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 22:23:52,044 [ERROR] [crawling.py:119]:: ===== def param_validate ERROR : ====== 변수 예외처리 중 오류 발생
+2022-08-07 22:23:52,045 [ERROR] [crawling.py:171]:: ===== def param_call ERROR : ====== 변수 request 중 오류 발생
+2022-08-07 22:24:55,701 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 22:24:55,792 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 22:24:55,794 [INFO] [crawling.py:131]:: ===== def param_call start ======
+2022-08-07 22:24:55,794 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 22:24:55,795 [ERROR] [crawling.py:119]:: ===== def param_validate ERROR : ====== 변수 예외처리 중 오류 발생
+2022-08-07 22:24:55,795 [ERROR] [crawling.py:171]:: ===== def param_call ERROR : ====== 변수 request 중 오류 발생
+2022-08-07 22:25:19,971 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 22:25:20,070 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 22:25:20,072 [INFO] [crawling.py:131]:: ===== def param_call start ======
+2022-08-07 22:25:20,073 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 22:25:20,073 [INFO] [crawling.py:65]:: ===== def param_validate INFO : ====== 사용자 FROM TO 라운드 필수 변수 없음
+2022-08-07 22:25:59,499 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 22:25:59,593 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 22:25:59,595 [INFO] [crawling.py:132]:: ===== def param_call start ======
+2022-08-07 22:25:59,596 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 22:25:59,596 [INFO] [crawling.py:65]:: ===== def param_validate INFO : ====== 사용자 FROM TO 라운드 필수 변수 없음
+2022-08-07 22:25:59,597 [INFO] [crawling.py:66]:: {'s_season': '018', 's_pr': '201|1', 'e_season': '018', 'e_pr': '201|1'}
+2022-08-07 22:26:38,503 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 22:26:38,590 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 22:26:38,592 [INFO] [crawling.py:133]:: ===== def param_call start ======
+2022-08-07 22:26:38,593 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 22:26:38,594 [INFO] [crawling.py:73]:: ===== def param_validate INFO : ====== 라운드(s_part/e_part) 변수 데이터 추출 start
+2022-08-07 22:26:38,649 [INFO] [crawling.py:91]:: ===== def param_validate INFO : ====== 라운드(s_pr 변수 데이터 추출 end
+2022-08-07 22:26:38,700 [INFO] [crawling.py:91]:: ===== def param_validate INFO : ====== 라운드(e_pr 변수 데이터 추출 end
+2022-08-07 22:26:38,700 [ERROR] [crawling.py:121]:: ===== def param_validate ERROR : ====== 변수 예외처리 중 오류 발생
+2022-08-07 22:26:38,701 [ERROR] [crawling.py:173]:: ===== def param_call ERROR : ====== 변수 request 중 오류 발생
+2022-08-07 22:27:47,286 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 22:27:47,378 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 22:27:47,380 [INFO] [crawling.py:133]:: ===== def param_call start ======
+2022-08-07 22:27:47,380 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 22:27:47,380 [INFO] [crawling.py:73]:: ===== def param_validate INFO : ====== 라운드(s_part/e_part) 변수 데이터 추출 start
+2022-08-07 22:27:47,428 [INFO] [crawling.py:91]:: ===== def param_validate INFO : ====== 라운드(s_pr 변수 데이터 추출 end
+2022-08-07 22:27:47,468 [INFO] [crawling.py:91]:: ===== def param_validate INFO : ====== 라운드(e_pr 변수 데이터 추출 end
+2022-08-07 22:27:47,469 [INFO] [crawling.py:118]:: ===== def param_validate end ======
+2022-08-07 22:27:47,469 [INFO] [crawling.py:141]:: ===== def param_validate INFO : ====== params = {'s_seaon': '018', 's_pr': '201|1', 'e_season': '018', 'e_pr': '201|1', 'part': 'point'}
+2022-08-07 22:27:47,566 [INFO] [crawling.py:164]:: ===== def param_call end ======
+2022-08-07 22:28:03,371 [INFO] [crawling.py:14]:: ================ crawling start ================
+2022-08-07 22:28:03,454 [INFO] [crawling.py:31]:: ===== locals()를 이용하여 파라미터 데이터 정리 ======
+2022-08-07 22:28:03,456 [INFO] [crawling.py:133]:: ===== def param_call start ======
+2022-08-07 22:28:03,457 [INFO] [crawling.py:53]:: ===== def param_validate start ======
+2022-08-07 22:28:03,457 [INFO] [crawling.py:73]:: ===== def param_validate INFO : ====== 라운드(s_part/e_part) 변수 데이터 추출 start
+2022-08-07 22:28:03,499 [INFO] [crawling.py:91]:: ===== def param_validate INFO : ====== 라운드(s_pr 변수 데이터 추출 end
+2022-08-07 22:28:03,539 [INFO] [crawling.py:91]:: ===== def param_validate INFO : ====== 라운드(e_pr 변수 데이터 추출 end
+2022-08-07 22:28:03,540 [INFO] [crawling.py:118]:: ===== def param_validate end ======
+2022-08-07 22:28:03,541 [INFO] [crawling.py:141]:: ===== def param_validate INFO : ====== params = {'s_seaon': '018', 's_pr': '201|2', 'e_season': '018', 'e_pr': '201|1', 'part': 'point'}
+2022-08-07 22:28:03,604 [INFO] [crawling.py:169]:: ===== def param_call INFO : ====== 서버 500 에러 발생
