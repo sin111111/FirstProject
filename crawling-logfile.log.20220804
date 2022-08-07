@@ -1,0 +1,47 @@
+2022-08-04 00:47:43,116 [ERROR] [<ipython-input-6-5b30a06a85e8>:27]:: error log
+2022-08-04 00:48:13,138 [ERROR] [3231742903.py:27]:: error log
+2022-08-04 00:49:08,139 [DEBUG] [266435035.py:24]:: This message should appear on the console
+2022-08-04 00:49:08,140 [INFO] [266435035.py:25]:: So should this
+2022-08-04 00:49:08,141 [WARNING] [266435035.py:26]:: And this, too
+2022-08-04 00:49:08,143 [ERROR] [266435035.py:27]:: error log
+2022-08-04 00:50:16,429 [DEBUG] [266435035.py:24]:: This message should appear on the console
+2022-08-04 00:50:16,429 [INFO] [266435035.py:25]:: So should this
+2022-08-04 00:50:16,430 [WARNING] [266435035.py:26]:: And this, too
+2022-08-04 00:50:16,431 [ERROR] [266435035.py:27]:: error log
+2022-08-04 00:50:51,499 [DEBUG] [955946049.py:24]:: debug log
+2022-08-04 00:50:51,499 [INFO] [955946049.py:25]:: info log
+2022-08-04 00:50:51,500 [WARNING] [955946049.py:26]:: warning log
+2022-08-04 00:50:51,501 [ERROR] [955946049.py:27]:: error log
+2022-08-04 00:51:19,424 [DEBUG] [<ipython-input-7-5a99524182b5>:24]:: debug log
+2022-08-04 00:51:19,425 [INFO] [<ipython-input-7-5a99524182b5>:25]:: info log
+2022-08-04 00:51:19,426 [WARNING] [<ipython-input-7-5a99524182b5>:26]:: warning log
+2022-08-04 00:51:19,428 [ERROR] [<ipython-input-7-5a99524182b5>:27]:: error log
+2022-08-04 00:52:19,830 [DEBUG] [<ipython-input-8-f4edb7efdf16>:25]:: debug log
+2022-08-04 00:52:19,832 [INFO] [<ipython-input-8-f4edb7efdf16>:26]:: info log
+2022-08-04 00:52:19,834 [WARNING] [<ipython-input-8-f4edb7efdf16>:27]:: warning log
+2022-08-04 00:52:19,835 [ERROR] [<ipython-input-8-f4edb7efdf16>:28]:: error log
+2022-08-04 00:52:19,835 [ERROR] [<ipython-input-8-f4edb7efdf16>:28]:: error log
+2022-08-04 00:52:19,835 [ERROR] [<ipython-input-8-f4edb7efdf16>:28]:: error log
+2022-08-04 00:57:01,352 [ERROR] [log.py:23]:: error log
+2022-08-04 01:05:44,907 [ERROR] [crawling.py:101]:: params is {'s_seaon': '001', 's_pr': '204|1', 'e_season': '018', 'e_pr': '203|1', 'part': 'point'}& STATUS CODE is 500
+Stack (most recent call last):
+  File "d:\personalsource\FirstProject\crawling.py", line 124, in <module>
+    table_data_dict = param_call({name:dict_key})
+  File "d:\personalsource\FirstProject\crawling.py", line 101, in param_call
+    logger.error('params is ' + str(params) + '& STATUS CODE is ' + str(html_spec.status_code), stack_info=True)
+2022-08-04 01:09:07,160 [WARNING] [crawling.py:102] - == params is {'s_seaon': '001', 's_pr': '204|1', 'e_season': '018', 'e_pr': '203|1', 'part': 'point'}
+2022-08-04 01:10:08,574 [INFO] [crawling.py:102] - == params is {'s_seaon': '001', 's_pr': '204|1', 'e_season': '018', 'e_pr': '203|1', 'part': 'point'}
+2022-08-04 01:12:26,055 [ERROR] [crawling.py:104] - == 
+Stack (most recent call last):
+  File "d:\personalsource\FirstProject\crawling.py", line 127, in <module>
+    table_data_dict = param_call({name:dict_key})
+  File "d:\personalsource\FirstProject\crawling.py", line 104, in param_call
+    logger.error('', stack_info=True)
+2022-08-04 01:13:17,607 [ERROR] [crawling.py:104] - == 
+Stack (most recent call last):
+  File "d:\personalsource\FirstProject\crawling.py", line 127, in <module>
+    table_data_dict = param_call({name:dict_key})
+  File "d:\personalsource\FirstProject\crawling.py", line 104, in param_call
+    logger.error('', stack_info=True)
+2022-08-04 22:40:18,206 [ERROR] [crawling.py:104] - == exc_info가 true
+NoneType: None

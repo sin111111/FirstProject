@@ -1,21 +1,30 @@
+# %%
+# %%
 import logging
 import logging.handlers
 
-# logger instance
-logger = logging.getLogger(__name__)
+def get_logger():    
+    # logger instance
+    logger = logging.getLogger()
+    # handler initialize
+    logger.handlers.clear()
+    logger.setLevel(level=logging.INFO)
+    # formatter
+    formatter = logging.Formatter('%(asctime)s [%(levelname)s] [%(filename)s:%(lineno)s]:: %(message)s')
+    # Hander
+    streamHandler = logging.StreamHandler()
+    fileHandler = logging.handlers.TimedRotatingFileHandler('./crawling-logfile.log', when='midnight', interval=1, encoding='utf-8')
+    fileHandler.suffix = '%Y%m%d'
 
-# formatter
-formatter = logging.Formatter('%(asctime)s [%(levelname)s] [%(filename)s:%(lineno)s] - == %(message)s')
+    streamHandler.setFormatter(formatter)
+    fileHandler.setFormatter(formatter)
 
-# Hander
-streamHandler = logging.StreamHandler()
-fileHandler = logging.handlers.TimedRotatingFileHandler('./crawling-logfile.log', when='midnight', interval=1, encoding='utf-8')
-fileHandler.suffix = '%Y%m%d'
+    logger.addHandler(streamHandler)
+    logger.addHandler(fileHandler)
 
-streamHandler.setFormatter(formatter)
-fileHandler.setFormatter(formatter)
+    return logger
 
-logger.addHandler(streamHandler)
-logger.addHandler(fileHandler)
 
-logger.setLevel(level=logging.DEBUG)
+mylogger = get_logger()
+
+# %%
