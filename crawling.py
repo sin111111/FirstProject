@@ -81,7 +81,7 @@ def param_validate(paramdict):
 
             if(int(ssk) >  int(esk)):
                 mylogger.info('====== def param_validate INFO : ====== 사용자 FROM TO 시즌 변수 설정 오류')
-                mylogger.info(paramdict)
+                mylogger.info(str(paramdict))
                 result = '= 사용자 FROM TO 시즌 변수 설정 오류' + '\n\n' + '올바른 기간을 입력하세요.'
                 return result
 
@@ -149,19 +149,18 @@ returndict = param_validate({'s_season':'019', 's_pr':'201|1', 'e_season':'018',
 # 특정 값을 요청하는 경우
 # 팀 누적 기록 중 '도드람 2021-2022 V-리그' 시즌 부터의 기록 요청
 
-def param_call(paramdict):
+def param_call(params):
     try:
         mylogger.info('====== def param_call start ======')
-        params = param_validate(paramdict) # 파라미터 요청 전 예외처리
 
-        # for key in ['s_season', 's_pr', 'e_season', 'e_pr', 'part']:
-        #     if(paramdict.get(key) is None):
-        #         return params # param_validate에서 오류 발생 시
+        for key in ['s_season', 's_pr', 'e_season', 'e_pr', 'part']:
+            if(params.get(key) is None):
+                return params # param_validate에서 오류 발생 시
 
 
-        mylogger.info('====== def param_validate INFO : ====== params => ' + str(params))
+        mylogger.info('====== def param_call INFO : ====== params => ' + str(params))
         html_spec = requests.get(init_url, verify=False, params=params)
-        
+        mylogger.info('====== def param_call INFO : ====== html_spec.status_code => ' + str(html_spec.status_code))
         if(html_spec.status_code == 200):
             soup_spec = BeautifulSoup(html_spec.content, 'html.parser')
             html_spec.close()
