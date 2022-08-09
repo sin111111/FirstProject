@@ -154,9 +154,10 @@ def param_call(params):
         mylogger.info('====== def param_call start ======')
 
         for key in ['s_season', 's_pr', 'e_season', 'e_pr', 'part']:
-            if(params.get(key) is None):
-                return params # param_validate에서 오류 발생 시
-
+            try:
+                params[key]
+            except:
+                return params
 
         mylogger.info('====== def param_call INFO : ====== params => ' + str(params))
         html_spec = requests.get(init_url, verify=False, params=params)
