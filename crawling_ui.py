@@ -1,5 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QHBoxLayout, QTextEdit
+from PyQt5.QtWidgets import *
+import crawling
+
 
 class MyApp(QWidget):
 
@@ -29,7 +31,7 @@ class MyApp(QWidget):
         self.show()
 
     def btn1clicked(self):
-        self.te.text = "aaa"
+        self.te.setText(str(crawling.table))
 
 
     

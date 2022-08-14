@@ -143,7 +143,7 @@ def param_validate(paramdict):
         return result
 
 
-returndict = param_validate({'s_season':'019', 's_pr':'201|1', 'e_season':'018', 'e_pr':'201|1', 'part':'point'})
+returndict = param_validate({'s_season':'018', 's_pr':'201|1', 'e_season':'018', 'e_pr':'201|1', 'part':'point'})
 
 # %%
 # 특정 값을 요청하는 경우
