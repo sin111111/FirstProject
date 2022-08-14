@@ -17,7 +17,7 @@ class MyApp(QWidget):
 
         self.te = QTextEdit()
         self.te.setAcceptRichText(False)
-        self.setWindowTitle('Crawling FisrtProject')  # self: MyApp 객체
+        self.setWindowTitle('Crawling FirstProject')  # self: MyApp 객체
 
         hbox = QHBoxLayout()
         hbox.addWidget(self.te)
@@ -31,7 +31,9 @@ class MyApp(QWidget):
         self.show()
 
     def btn1clicked(self):
-        self.te.setText(str(crawling.table))
+        returndict = crawling.param_validate({'s_season':'018', 's_pr':'201|1', 'e_season':'018', 'e_pr':'201|1', 'part':'point'})
+        table = crawling.param_call(returndict)
+        self.te.setText(str(table))
 
 
     
