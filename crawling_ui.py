@@ -15,11 +15,43 @@ class MyApp(QMainWindow):
         labeltitle = QLabel('팀 누적 기록', self)
         # labeltitle.setAlignment(Qt.AlignVCenter)
 
+        rbtn1 = QRadioButton('남자부', self)
+        rbtn1.setChecked(True) # 기본 설정
+
+        rbtn2 = QRadioButton('여자부', self)
+
         titlelayout = QHBoxLayout()
         titlelayout.addWidget(labeltitle)
+        titlelayout.addWidget(rbtn1)
+        titlelayout.addWidget(rbtn2)
 
         self.top = QFrame()
         self.top.setLayout(titlelayout)
+
+        cb1 = QComboBox(self)
+        cb1.addItem('Option1')
+
+        cb2 = QComboBox(self)
+        cb2.addItem('Option2')
+
+        cb3 = QComboBox(self)
+        cb3.addItem('Option3')
+
+        cb4 = QComboBox(self)
+        cb4.addItem('Option4')
+
+        cb5 = QComboBox(self)
+        cb5.addItem('Option5')
+
+        cmblayout = QHBoxLayout()
+        cmblayout.addWidget(cb1)
+        cmblayout.addWidget(cb2)
+        cmblayout.addWidget(cb3)
+        cmblayout.addWidget(cb4)
+        cmblayout.addWidget(cb5)
+
+        self.middle = QFrame()
+        self.middle.setLayout(cmblayout)
 
         btn1 = QPushButton('&Button1', self)
         btn1.setText('crawling 실행')
@@ -29,17 +61,17 @@ class MyApp(QMainWindow):
         self.textbox.setAcceptRichText(False)
 
         hbox = QHBoxLayout()
-        hbox.addWidget(labeltitle)
         hbox.addWidget(self.textbox)
         hbox.addWidget(btn1)
         hbox.addStretch()
 
-        self.middle = QFrame()
-        self.middle.setLayout(hbox)
+        self.bottom = QFrame()
+        self.bottom.setLayout(hbox)
 
         vbox = QVBoxLayout()
         vbox.addWidget(self.top)
         vbox.addWidget(self.middle)
+        vbox.addWidget(self.bottom)
 
         mainwidget = QWidget()
         mainwidget.setLayout(vbox)
