@@ -12,7 +12,11 @@ class MyApp(QMainWindow):
 
     def initUI(self):
 
+        self.setWindowTitle('Crawling FirstProject')  # self: MyApp 객체
+
         labeltitle = QLabel('팀 누적 기록', self)
+        font = labeltitle.font()
+        font.setBold(True) # 왜 안되지
         # labeltitle.setAlignment(Qt.AlignVCenter)
 
         rbtn1 = QRadioButton('남자부', self)
@@ -22,11 +26,16 @@ class MyApp(QMainWindow):
 
         titlelayout = QHBoxLayout()
         titlelayout.addWidget(labeltitle)
+        titlelayout.addSpacing(50)
         titlelayout.addWidget(rbtn1)
         titlelayout.addWidget(rbtn2)
+        titlelayout.addStretch(3)
 
         self.top = QFrame()
         self.top.setLayout(titlelayout)
+
+        labelFromTo = QLabel('기간', self)
+        labelTilde = QLabel('~', self)
 
         cb1 = QComboBox(self)
         cb1.addItem('Option1')
@@ -40,30 +49,44 @@ class MyApp(QMainWindow):
         cb4 = QComboBox(self)
         cb4.addItem('Option4')
 
+        FromTolayout = QHBoxLayout()
+        FromTolayout.addWidget(labelFromTo)
+        FromTolayout.addSpacing(50)
+        FromTolayout.addWidget(cb1)
+        FromTolayout.addWidget(cb2)
+        FromTolayout.addWidget(labelTilde)
+        FromTolayout.addWidget(cb3)
+        FromTolayout.addWidget(cb4)
+
+        labelCategory = QLabel('유형', self)
+        labelCategory.resize(150,10)
+
         cb5 = QComboBox(self)
         cb5.addItem('Option5')
-
-        cmblayout = QHBoxLayout()
-        cmblayout.addWidget(cb1)
-        cmblayout.addWidget(cb2)
-        cmblayout.addWidget(cb3)
-        cmblayout.addWidget(cb4)
-        cmblayout.addWidget(cb5)
-
-        self.middle = QFrame()
-        self.middle.setLayout(cmblayout)
 
         btn1 = QPushButton('&Button1', self)
         btn1.setText('crawling 실행')
         btn1.clicked.connect(self.btn1clicked)
+
+        Categorylayout = QHBoxLayout()
+        Categorylayout.addWidget(labelCategory)
+        Categorylayout.addSpacing(50)
+        Categorylayout.addWidget(cb5)
+        Categorylayout.addStretch(4)
+        Categorylayout.addWidget(btn1)
+
+        cmblayout = QVBoxLayout()
+        cmblayout.addLayout(FromTolayout)
+        cmblayout.addLayout(Categorylayout)
+
+        self.middle = QFrame()
+        self.middle.setLayout(cmblayout)
 
         self.textbox = QTextEdit()
         self.textbox.setAcceptRichText(False)
 
         hbox = QHBoxLayout()
         hbox.addWidget(self.textbox)
-        hbox.addWidget(btn1)
-        hbox.addStretch()
 
         self.bottom = QFrame()
         self.bottom.setLayout(hbox)
@@ -77,9 +100,7 @@ class MyApp(QMainWindow):
         mainwidget.setLayout(vbox)
 
         self.setCentralWidget(mainwidget)
-        self.setWindowTitle('Crawling FirstProject')  # self: MyApp 객체
         self.move(300,300)
-        self.resize(500, 200)
         self.show()
 
 
