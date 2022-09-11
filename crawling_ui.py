@@ -19,16 +19,20 @@ class MyApp(QMainWindow):
         font.setBold(True) # 왜 안되지
         # labeltitle.setAlignment(Qt.AlignVCenter)
 
-        rbtn1 = QRadioButton('남자부', self)
-        rbtn1.setChecked(True) # 기본 설정
+        rbtnMale = QRadioButton('남자부')
+        rbtnMale.setChecked(True) # 기본 설정
+        rbtnMale.checkedvalue = '1'
+        rbtnMale.toggled.connect(self.rbtnclicked)
 
-        rbtn2 = QRadioButton('여자부', self)
+        rbtnFemale = QRadioButton('여자부')
+        rbtnFemale.checkedvalue = '2'
+        rbtnFemale.toggled.connect(self.rbtnclicked)
 
         titlelayout = QHBoxLayout()
         titlelayout.addWidget(labeltitle)
         titlelayout.addSpacing(50)
-        titlelayout.addWidget(rbtn1)
-        titlelayout.addWidget(rbtn2)
+        titlelayout.addWidget(rbtnMale)
+        titlelayout.addWidget(rbtnFemale)
         titlelayout.addStretch(3)
 
         self.top = QFrame()
@@ -38,42 +42,55 @@ class MyApp(QMainWindow):
         labelTilde = QLabel('~', self)
 
         cb1 = QComboBox(self)
-        cb1.addItem('Option1')
+        cb1.value = 's_season'
+        for key,value in crawling.testdict1.items():
+            cb1.addItem(value, key)
+        
+        cb1.currentIndexChanged.connect(self.cmbselectionchanged)
 
-        cb2 = QComboBox(self)
-        cb2.addItem('Option2')
+        self.cb2 = QComboBox(self)
+        self.cb2.value = 's_pr'
 
         cb3 = QComboBox(self)
-        cb3.addItem('Option3')
+        cb3.value = 'e_season'
+        for key,value in crawling.testdict3.items():
+            cb3.addItem(value, key)
+        
+        cb3.currentIndexChanged.connect(self.cmbselectionchanged)
 
-        cb4 = QComboBox(self)
-        cb4.addItem('Option4')
+        self.cb4 = QComboBox(self)
+        self.cb4.value = 'e_pr'
+        
 
         FromTolayout = QHBoxLayout()
         FromTolayout.addWidget(labelFromTo)
         FromTolayout.addSpacing(50)
         FromTolayout.addWidget(cb1)
-        FromTolayout.addWidget(cb2)
+        FromTolayout.addWidget(self.cb2)
         FromTolayout.addWidget(labelTilde)
         FromTolayout.addWidget(cb3)
-        FromTolayout.addWidget(cb4)
+        FromTolayout.addWidget(self.cb4)
 
         labelCategory = QLabel('유형', self)
         labelCategory.resize(150,10)
 
         cb5 = QComboBox(self)
-        cb5.addItem('Option5')
+        cb5.value = 'e_season'
+        for key,value in crawling.testdict5.items():
+            cb5.addItem(value, key)
+        
+        cb5.currentIndexChanged.connect(self.cmbselectionchanged)        
 
-        btn1 = QPushButton('&Button1', self)
-        btn1.setText('crawling 실행')
-        btn1.clicked.connect(self.btn1clicked)
+        btnInquiry = QPushButton('&Button1', self)
+        btnInquiry.setText('crawling 실행')
+        btnInquiry.clicked.connect(self.btnInquiryclicked)
 
         Categorylayout = QHBoxLayout()
         Categorylayout.addWidget(labelCategory)
         Categorylayout.addSpacing(50)
         Categorylayout.addWidget(cb5)
         Categorylayout.addStretch(4)
-        Categorylayout.addWidget(btn1)
+        Categorylayout.addWidget(btnInquiry)
 
         cmblayout = QVBoxLayout()
         cmblayout.addLayout(FromTolayout)
@@ -103,14 +120,48 @@ class MyApp(QMainWindow):
         self.move(300,300)
         self.show()
 
+    def rbtnclicked(self):
+        radiobutton = self.sender()
+        if(radiobutton.isChecked()):
+            s_part = radiobutton.checkedvalue
+            print(radiobutton.text() + "is selected")
+            print('s_part is ' + s_part)        
 
-    def btn1clicked(self):
-        returndict = crawling.param_validate({'s_season':'018', 's_pr':'201|1', 'e_season':'018', 'e_pr':'201|1', 'part':'point'})
+
+    def cmbselectionchanged(self):
+        combobox = self.sender()
+        comboData = combobox.currentData()
+
+        global s_season
+        global s_pr
+        global e_season
+        global e_pr
+        global part
+
+        if(combobox.value == 's_season'):
+            s_season = comboData
+            spr_dict = crawling.param_call_round('s')
+        elif(combobox.value == 's_pr'):
+            s_pr = comboData
+        elif(combobox.value == 'e_season'):
+            e_season = comboData
+            epr_dict = crawling.param_call_round('e')
+        elif(combobox.value == 'e_pr'):
+            e_pr = comboData
+        else:
+            part = comboData
+
+        print(combobox.currentText())
+        print(s_season)
+
+
+    def btnInquiryclicked(self):
+        returndict = crawling.param_validate({'s_season': s_season, 's_pr': s_pr, 'e_season': e_season, 'e_pr': e_pr, 'part': part})
         table = crawling.param_call(returndict)
         self.textbox.setText(str(table))
 
 
-    
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     mainWindow = MyApp()

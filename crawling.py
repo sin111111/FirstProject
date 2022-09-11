@@ -38,7 +38,11 @@ for name in param_names:
 
     
     locals()[str(name)+ '_dict'] = temp_dict
+    
 
+testdict1 = locals()['s_season_dict']
+testdict3 = locals()['e_season_dict']
+testdict5 = locals()['part_dict']
 
 # %%
 # 파라미터 요청 전 예외처리
