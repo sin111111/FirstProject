@@ -140,12 +140,20 @@ class MyApp(QMainWindow):
 
         if(combobox.value == 's_season'):
             s_season = comboData
-            spr_dict = crawling.param_call_round('s')
+            spr_dict = crawling.round_param_get({'spart':'s', 's_season':s_season, 'e_season':e_season })
+            for key,value in spr_dict.items():
+                self.cb2.addItem(value, key)
+
+
         elif(combobox.value == 's_pr'):
             s_pr = comboData
         elif(combobox.value == 'e_season'):
             e_season = comboData
-            epr_dict = crawling.param_call_round('e')
+            epr_dict = crawling.round_param_get({'spart':'e', 's_season':s_season, 'e_season':e_season })
+            for key,value in epr_dict.items():
+                self.cb2.addItem(value, key)
+                
+
         elif(combobox.value == 'e_pr'):
             e_pr = comboData
         else:
