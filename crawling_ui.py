@@ -41,11 +41,18 @@ class MyApp(QMainWindow):
         labelFromTo = QLabel('기간', self)
         labelTilde = QLabel('~', self)
 
+        global s_season
+        global s_pr
+        global e_season
+        global e_pr
+        global part
+
         cb1 = QComboBox(self)
         cb1.value = 's_season'
         for key,value in crawling.testdict1.items():
             cb1.addItem(value, key)
         
+        s_season = cb1.currentData()
         cb1.currentIndexChanged.connect(self.cmbselectionchanged)
 
         self.cb2 = QComboBox(self)
@@ -56,12 +63,13 @@ class MyApp(QMainWindow):
         for key,value in crawling.testdict3.items():
             cb3.addItem(value, key)
         
+        e_season = cb3.currentData()
+        
         cb3.currentIndexChanged.connect(self.cmbselectionchanged)
 
         self.cb4 = QComboBox(self)
         self.cb4.value = 'e_pr'
         
-
         FromTolayout = QHBoxLayout()
         FromTolayout.addWidget(labelFromTo)
         FromTolayout.addSpacing(50)
@@ -79,6 +87,7 @@ class MyApp(QMainWindow):
         for key,value in crawling.testdict5.items():
             cb5.addItem(value, key)
         
+        part = cb5.currentData()        
         cb5.currentIndexChanged.connect(self.cmbselectionchanged)        
 
         btnInquiry = QPushButton('&Button1', self)
@@ -131,12 +140,6 @@ class MyApp(QMainWindow):
     def cmbselectionchanged(self):
         combobox = self.sender()
         comboData = combobox.currentData()
-
-        global s_season
-        global s_pr
-        global e_season
-        global e_pr
-        global part
 
         if(combobox.value == 's_season'):
             s_season = comboData
