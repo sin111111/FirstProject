@@ -49,33 +49,33 @@ testdict5 = locals()['part_dict']
 # 라운드 파라미터 데이터 추출
 # 시즌 콤보박스 valuechanged 시 시즌마다 변동되는 라운드 파라미터 추출 필요
 
-def round_param_get(params_parts):
+def round_param_get(params):
 
     mylogger.info('====== def round_param_get INFO : ====== 라운드(s_pr/e_pr) 변수 데이터 추출 start')
     part_url = 'https://www.kovo.co.kr/stats/stats_r_round.asp'
-    # params_parts = [{'spart':'s', 's_season':ssk, 'e_season':esk },{'spart':'e', 's_season':ssk, 'e_season':esk}]
+    # params = {'spart':'s', 's_season':ssk, 'e_season':esk } 또는 {'spart':'e', 's_season':ssk, 'e_season':esk}
 
-    for params in params_parts:
-        html_part = requests.get(part_url, verify=False, params=params)
+    html_part = requests.get(part_url, verify=False, params=params)
 
-        if(html_part.status_code == 200):
-            soup_part = BeautifulSoup(html_part.content, 'html.parser')
-            html_part.close()
+    if(html_part.status_code == 200):
+        soup_part = BeautifulSoup(html_part.content, 'html.parser')
+        html_part.close()
 
-            temp_dict = {}
-            for option in soup_part.find('select', {'name' : params['spart'] + '_pr'}).find_all('option'):
-                key = option.attrs['value'] # '201|1'
-                value = option.getText() # '1_Round'
-                temp_dict[key] = value
+        temp_dict = {}
+        print(params)
+        for option in soup_part.find('select', {'name' : params['spart'] + '_pr'}).find_all('option'):
+            key = option.attrs['value'] # '201|1'
+            value = option.getText() # '1_Round'
+            temp_dict[key] = value
 
-            locals()[params['spart'] + '_pr'+ '_dict'] = temp_dict    
-            mylogger.info('====== def round_param_get INFO : ====== 라운드(' + params['spart'] + '_pr)' +' 변수 데이터 추출 end')
-            return locals()[params['spart'] + '_pr'+ '_dict']
+        locals()[params['spart'] + '_pr'+ '_dict'] = temp_dict    
+        mylogger.info('====== def round_param_get INFO : ====== 라운드(' + params['spart'] + '_pr)' +' 변수 데이터 추출 end')
+        return locals()[params['spart'] + '_pr'+ '_dict']
 
-        else:
-            mylogger.info('====== def round_param_get INFO : ====== 라운드 변수 추출 중 서버 에러 발생')
-            result = '=라운드 변수 추출 중 서버 ' + str(html_part.status_code) +' 에러' + '\n\n' + '관리자에게 문의하세요.'
-            return result
+    else:
+        mylogger.info('====== def round_param_get INFO : ====== 라운드 변수 추출 중 서버 에러 발생')
+        result = '=라운드 변수 추출 중 서버 ' + str(html_part.status_code) +' 에러' + '\n\n' + '관리자에게 문의하세요.'
+        return result
 
 
 

@@ -6,6 +6,12 @@ import crawling
 
 class MyApp(QMainWindow):
 
+    global s_season
+    global s_pr
+    global e_season
+    global e_pr
+    global part
+
     def __init__(self):
         super().__init__()
         self.initUI()
@@ -41,34 +47,31 @@ class MyApp(QMainWindow):
         labelFromTo = QLabel('기간', self)
         labelTilde = QLabel('~', self)
 
-        global s_season
-        global s_pr
-        global e_season
-        global e_pr
-        global part
-
         cb1 = QComboBox(self)
         cb1.value = 's_season'
         for key,value in crawling.testdict1.items():
             cb1.addItem(value, key)
         
-        s_season = cb1.currentData()
+        self.s_season = cb1.currentData()
         cb1.currentIndexChanged.connect(self.cmbselectionchanged)
 
         self.cb2 = QComboBox(self)
         self.cb2.value = 's_pr'
+        self.cb2.currentIndexChanged.connect(self.cmbselectionchanged)
 
         cb3 = QComboBox(self)
         cb3.value = 'e_season'
         for key,value in crawling.testdict3.items():
             cb3.addItem(value, key)
         
-        e_season = cb3.currentData()
+        self.e_season = cb3.currentData()
         
         cb3.currentIndexChanged.connect(self.cmbselectionchanged)
 
         self.cb4 = QComboBox(self)
         self.cb4.value = 'e_pr'
+        self.cb4.currentIndexChanged.connect(self.cmbselectionchanged)
+
         
         FromTolayout = QHBoxLayout()
         FromTolayout.addWidget(labelFromTo)
@@ -87,7 +90,7 @@ class MyApp(QMainWindow):
         for key,value in crawling.testdict5.items():
             cb5.addItem(value, key)
         
-        part = cb5.currentData()        
+        self.part = cb5.currentData()        
         cb5.currentIndexChanged.connect(self.cmbselectionchanged)        
 
         btnInquiry = QPushButton('&Button1', self)
@@ -142,32 +145,33 @@ class MyApp(QMainWindow):
         comboData = combobox.currentData()
 
         if(combobox.value == 's_season'):
-            s_season = comboData
-            spr_dict = crawling.round_param_get({'spart':'s', 's_season':s_season, 'e_season':e_season })
+            self.s_season = comboData
+            spr_dict = crawling.round_param_get({'spart':'s', 's_season':self.s_season, 'e_season':self.e_season })
             for key,value in spr_dict.items():
                 self.cb2.addItem(value, key)
 
 
         elif(combobox.value == 's_pr'):
-            s_pr = comboData
+            self.s_pr = comboData
+
+
         elif(combobox.value == 'e_season'):
-            e_season = comboData
-            epr_dict = crawling.round_param_get({'spart':'e', 's_season':s_season, 'e_season':e_season })
+            self.e_season = comboData
+            epr_dict = crawling.round_param_get({'spart':'e', 's_season':self.s_season, 'e_season':self.e_season })
             for key,value in epr_dict.items():
-                self.cb2.addItem(value, key)
+                self.cb4.addItem(value, key)
                 
 
         elif(combobox.value == 'e_pr'):
-            e_pr = comboData
+            self.e_pr = comboData
+        
+        
         else:
-            part = comboData
-
-        print(combobox.currentText())
-        print(s_season)
+            self.part = comboData
 
 
     def btnInquiryclicked(self):
-        returndict = crawling.param_validate({'s_season': s_season, 's_pr': s_pr, 'e_season': e_season, 'e_pr': e_pr, 'part': part})
+        returndict = crawling.param_validate({'s_season': self.s_season, 's_pr': self.s_pr, 'e_season': self.e_season, 'e_pr': self.e_pr, 'part': self.part})
         table = crawling.param_call(returndict)
         self.textbox.setText(str(table))
 
