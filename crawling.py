@@ -1,5 +1,6 @@
 # %%
 # 라이브러리 import
+from sysconfig import get_scheme_names
 from bs4 import BeautifulSoup
 from numpy import nan as NA
 import requests
@@ -39,12 +40,6 @@ for name in param_names:
     
     locals()[str(name)+ '_dict'] = temp_dict
     
-
-testdict1 = locals()['s_season_dict']
-testdict3 = locals()['e_season_dict']
-testdict5 = locals()['part_dict']
-
-
 # %%
 # 라운드 파라미터 데이터 추출
 # 시즌 콤보박스 valuechanged 시 시즌마다 변동되는 라운드 파라미터 추출 필요
@@ -62,7 +57,6 @@ def round_param_get(params):
         html_part.close()
 
         temp_dict = {}
-        print(params)
         for option in soup_part.find('select', {'name' : params['spart'] + '_pr'}).find_all('option'):
             key = option.attrs['value'] # '201|1'
             value = option.getText() # '1_Round'
@@ -87,7 +81,14 @@ def param_validate(paramdict):
         mylogger.info('====== def param_validate start ======')
         mylogger.info('====== def param_validate INFO : ====== paramdict 누락 가능성 확인 start')
 
-        if(paramdict.get('s_season') is None or paramdict.get('e_season') is None):
+        if(paramdict.get('s_part') is None):
+            mylogger.info('====== def param_validate INFO : ====== 사용자 남자부/여자부 필수 변수 없음')
+            mylogger.info(paramdict)
+            result = '= 사용자 남자부/여자부 필수 변수 없음' + '\n\n' + '부를 설정해주세요.'
+            return result          
+
+
+        elif(paramdict.get('s_season') is None or paramdict.get('e_season') is None):
             mylogger.info('====== def param_validate INFO : ====== 사용자 FROM TO 시즌 필수 변수 없음')
             mylogger.info(paramdict)
             result = '= 사용자 FROM TO 시즌 필수 변수 없음' + '\n\n' + '시즌을 모두 설정해주세요.'
@@ -111,6 +112,7 @@ def param_validate(paramdict):
         else:
             mylogger.info('====== def param_validate INFO : ====== paramdict 누락 가능성 확인 end')
 
+            spartk = paramdict['s_part']
             ssk = paramdict['s_season']
             esk = paramdict['e_season']
             spk = paramdict['s_pr']
@@ -171,7 +173,7 @@ def param_validate(paramdict):
                     return result
 
 
-        return_paramdict = {'s_season': ssk, 's_pr' : spk, 'e_season': esk, 'e_pr': epk, 'part': partk}
+        return_paramdict = {'s_part': spartk, 's_season': ssk, 's_pr' : spk, 'e_season': esk, 'e_pr': epk, 'part': partk}
         mylogger.info('====== def param_validate INFO : ====== return_paramdict => ' + str(return_paramdict))
         mylogger.info('====== def param_validate end ======')
         return return_paramdict
@@ -182,7 +184,7 @@ def param_validate(paramdict):
         return result
 
 
-returndict = param_validate({'s_season':'018', 's_pr':'201|1', 'e_season':'018', 'e_pr':'201|1', 'part':'point'})
+returndict = param_validate({'s_part': '1', 's_season':'018', 's_pr':'201|1', 'e_season':'018', 'e_pr':'201|1', 'part':'point'})
 
 # %%
 # 특정 값을 요청하는 경우
@@ -192,7 +194,7 @@ def param_call(params):
     try:
         mylogger.info('====== def param_call start ======')
 
-        for key in ['s_season', 's_pr', 'e_season', 'e_pr', 'part']:
+        for key in ['s_part', 's_season', 's_pr', 'e_season', 'e_pr', 'part']:
             try:
                 params[key]
             except:

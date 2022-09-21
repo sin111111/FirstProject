@@ -6,6 +6,7 @@ import crawling
 
 class MyApp(QMainWindow):
 
+    global s_part # 남자부,여자부
     global s_season
     global s_pr
     global e_season
@@ -49,7 +50,8 @@ class MyApp(QMainWindow):
 
         cb1 = QComboBox(self)
         cb1.value = 's_season'
-        for key,value in crawling.testdict1.items():
+
+        for key,value in crawling.s_season_dict.items():
             cb1.addItem(value, key)
         
         self.s_season = cb1.currentData()
@@ -61,7 +63,7 @@ class MyApp(QMainWindow):
 
         cb3 = QComboBox(self)
         cb3.value = 'e_season'
-        for key,value in crawling.testdict3.items():
+        for key,value in crawling.e_season_dict.items():
             cb3.addItem(value, key)
         
         self.e_season = cb3.currentData()
@@ -87,7 +89,7 @@ class MyApp(QMainWindow):
 
         cb5 = QComboBox(self)
         cb5.value = 'e_season'
-        for key,value in crawling.testdict5.items():
+        for key,value in crawling.part_dict.items():
             cb5.addItem(value, key)
         
         self.part = cb5.currentData()        
@@ -135,9 +137,9 @@ class MyApp(QMainWindow):
     def rbtnclicked(self):
         radiobutton = self.sender()
         if(radiobutton.isChecked()):
-            s_part = radiobutton.checkedvalue
+            self.s_part = radiobutton.checkedvalue
             print(radiobutton.text() + "is selected")
-            print('s_part is ' + s_part)        
+            print('s_part is ' + self.s_part)        
 
 
     def cmbselectionchanged(self):
@@ -171,7 +173,7 @@ class MyApp(QMainWindow):
 
 
     def btnInquiryclicked(self):
-        returndict = crawling.param_validate({'s_season': self.s_season, 's_pr': self.s_pr, 'e_season': self.e_season, 'e_pr': self.e_pr, 'part': self.part})
+        returndict = crawling.param_validate({'s_part': self.s_part, 's_season': self.s_season, 's_pr': self.s_pr, 'e_season': self.e_season, 'e_pr': self.e_pr, 'part': self.part})
         table = crawling.param_call(returndict)
         self.textbox.setText(str(table))
 
