@@ -31,6 +31,8 @@ class MyApp(QMainWindow):
         rbtnMale.checkedvalue = '1'
         rbtnMale.toggled.connect(self.rbtnclicked)
 
+        self.s_part = '1'
+
         rbtnFemale = QRadioButton('여자부')
         rbtnFemale.checkedvalue = '2'
         rbtnFemale.toggled.connect(self.rbtnclicked)
